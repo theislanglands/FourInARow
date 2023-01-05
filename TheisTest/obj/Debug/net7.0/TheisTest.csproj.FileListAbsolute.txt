@@ -1,0 +1,15 @@
+/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/bin/Debug/net7.0/TheisTest
+/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/bin/Debug/net7.0/TheisTest.deps.json
+/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/bin/Debug/net7.0/TheisTest.runtimeconfig.json
+/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/bin/Debug/net7.0/TheisTest.dll
+/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/bin/Debug/net7.0/TheisTest.pdb
+/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/obj/Debug/net7.0/TheisTest.csproj.AssemblyReference.cache
+/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/obj/Debug/net7.0/TheisTest.GeneratedMSBuildEditorConfig.editorconfig
+/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/obj/Debug/net7.0/TheisTest.AssemblyInfoInputs.cache
+/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/obj/Debug/net7.0/TheisTest.AssemblyInfo.cs
+/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/obj/Debug/net7.0/TheisTest.csproj.CoreCompileInputs.cache
+/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/obj/Debug/net7.0/TheisTest.dll
+/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/obj/Debug/net7.0/refint/TheisTest.dll
+/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/obj/Debug/net7.0/TheisTest.pdb
+/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/obj/Debug/net7.0/TheisTest.genruntimeconfig.cache
+/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/obj/Debug/net7.0/ref/TheisTest.dll
