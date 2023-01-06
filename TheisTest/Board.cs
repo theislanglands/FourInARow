@@ -1,4 +1,6 @@
-﻿using System;
+﻿using System.Drawing;
+using System.Numerics;
+
 namespace TheisTest
 
 {
@@ -8,6 +10,7 @@ namespace TheisTest
         int height = 6;
         int[,] grid;
 
+
         public Board()
         {
             // empty = 0, player1 = 1, player2 = 2
@@ -15,11 +18,7 @@ namespace TheisTest
             FillWithNumber(1);
         }
 
-        public int GetValue()
-        {
-            return grid[0, 1];
-        }
-
+        
         public void FillWithNumber(int value)
         {
             for (int i = 0; i < height; i++)
@@ -36,7 +35,60 @@ namespace TheisTest
             Array.Clear(grid, 0, grid.Length);
         }
 
-        public void addToSlot(int playerNumber, int col) {
+
+        public int CheckXInARow(int x, int playerId)
+        {
+
+            Point[] directionVectors = new Point[]
+            {
+                new Point(0, -1), // up
+                new Point(1, -1), // right-up
+                new Point(1, 0), // right
+                new Point(1, 1), // right-down
+                new Point(0, 1), // down
+                new Point(-1, 1), // down left
+                new Point(-1, 0), // left
+                new Point(-1, -1), // left up
+            };
+            
+            for (int row = 0; row < height; row++)
+            {
+                for (int col = 0; col < width; col++)
+                {
+                    int basevalue = grid[row, col];
+                    if (basevalue == 0 || basevalue != playerId) continue;
+
+                    foreach (Point vector in directionVectors)
+                    {
+                        int noInARow = 1;
+                        for (int i = 1; i < x; i++) // chceking x away from basevalue
+                        {
+                            
+                            int dx = col + vector.X * i;
+                            int dy = row + vector.Y * i;
+                            if (dx < 0 || dy < 0 || dx == width || dy == height) break; // outside grid
+                            int checkValue = grid[dy, dx];
+                            if (checkValue != basevalue) break; // wrong value
+                    
+                           
+                                noInARow++;
+                                //Console.WriteLine($"now {noInARow} IN A ROW");
+                           
+                            
+
+                            if (noInARow == x)
+                            {
+                                return 5;
+                            }
+                        }
+                    }
+                }
+            }
+
+            return 3;
+        }
+
+        public void AddToSlot(int playerNumber, int col) {
 
             // initial value = empty column
             int index = height - 1;

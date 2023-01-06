@@ -6,16 +6,20 @@ internal class Program
     {
         Board board = new();
         board.Clear();
+        
         Console.WriteLine(board);
-        board.addToSlot(1, 1);
-        board.addToSlot(1, 1);
+        board.AddToSlot(1, 1);
+        board.AddToSlot(1, 1);
         Console.WriteLine(board);
-        board.addToSlot(1, 1);
-        board.addToSlot(1, 1);
+        Console.WriteLine(board.CheckXInARow(4,1));
+        board.AddToSlot(1, 1);
         Console.WriteLine(board);
-        board.addToSlot(1, 1);
+        Console.WriteLine(board.CheckXInARow(4,1));
+        board.AddToSlot(1, 1);
         Console.WriteLine(board);
-        board.addToSlot(1, 1);
-        Console.WriteLine(board);
+        Console.WriteLine(board.CheckXInARow(4,1));
+
+        // Console.ForegroundColor = ConsoleColor.DarkRed;
+      
     }
 }
