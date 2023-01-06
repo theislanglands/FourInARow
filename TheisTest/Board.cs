@@ -36,56 +36,68 @@ namespace TheisTest
         }
 
 
-        public int CheckXInARow(int x, int playerId)
+        public bool CheckVictory(int noInRow, int playerId)
         {
-
-            Point[] directionVectors = new Point[]
-            {
-                new Point(0, -1), // up
-                new Point(1, -1), // right-up
-                new Point(1, 0), // right
-                new Point(1, 1), // right-down
-                new Point(0, 1), // down
-                new Point(-1, 1), // down left
-                new Point(-1, 0), // left
-                new Point(-1, -1), // left up
-            };
-            
             for (int row = 0; row < height; row++)
             {
                 for (int col = 0; col < width; col++)
                 {
                     int basevalue = grid[row, col];
                     if (basevalue == 0 || basevalue != playerId) continue;
-
-                    foreach (Point vector in directionVectors)
+                    if (ChechXInARow(row, col, noInRow) == true)
                     {
-                        int noInARow = 1;
-                        for (int i = 1; i < x; i++) // chceking x away from basevalue
-                        {
-                            
-                            int dx = col + vector.X * i;
-                            int dy = row + vector.Y * i;
-                            if (dx < 0 || dy < 0 || dx == width || dy == height) break; // outside grid
-                            int checkValue = grid[dy, dx];
-                            if (checkValue != basevalue) break; // wrong value
-                    
-                           
-                                noInARow++;
-                                //Console.WriteLine($"now {noInARow} IN A ROW");
-                           
-                            
+                        return true;
+                    }
+                }
+            }
+            return false;
+                   
+        }
 
-                            if (noInARow == x)
-                            {
-                                return 5;
-                            }
+        private bool ChechXInARow(int row, int col, int NoInRow)
+        {
+            Point[] directionVectors = GetDirectionVectors();
+            int dx, dy;
+
+            foreach (Point vector in directionVectors)
+            {
+                int countNoInRow = 1;
+                
+
+                for (int i = 1; i < NoInRow; i++) // chceking x away from basevalue
+                {
+                    dx = col + vector.X * i;
+                    dy = row + vector.Y * i;
+                    if (dx < 0 || dy < 0 || dx == width || dy == height) break; // outside grid
+                    if (grid[dy, dx] != grid[row, col]) break; // wrong value
+                    else
+                    {
+                        countNoInRow++;
+                        if (countNoInRow == NoInRow)
+                        {
+                            return true;
                         }
                     }
                 }
             }
 
-            return 3;
+            return false;
+                    
+        }
+
+        private static Point[] GetDirectionVectors()
+        {
+            return new Point[]
+            {
+                    new Point(0, -1), // up
+                    new Point(1, -1), // right-up
+                    new Point(1, 0), // right
+                    new Point(1, 1), // right-down
+                    new Point(0, 1), // down
+                    new Point(-1, 1), // down left
+                    new Point(-1, 0), // left
+                    new Point(-1, -1), // left up
+            };
         }
 
         public void AddToSlot(int playerNumber, int col) {
