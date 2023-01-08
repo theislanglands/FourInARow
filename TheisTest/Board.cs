@@ -15,10 +15,9 @@ namespace TheisTest
         {
             // empty = 0, player1 = 1, player2 = 2
             grid = new int[height, width];
-            FillWithNumber(1);
+            FillWithNumber(0);
         }
 
-        
         public void FillWithNumber(int value)
         {
             for (int i = 0; i < height; i++)
@@ -33,6 +32,15 @@ namespace TheisTest
         public void Clear()
         {
             Array.Clear(grid, 0, grid.Length);
+        }
+
+        public bool hasAvailableSlots()
+        {
+            for (int i = 0; i < width; i++)
+            {
+                if (grid[0,i] == 0) return true;
+            }
+            return false;
         }
 
 
@@ -51,7 +59,6 @@ namespace TheisTest
                 }
             }
             return false;
-                   
         }
 
         private bool ChechXInARow(int row, int col, int NoInRow)

@@ -4,22 +4,29 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Board board = new();
-        board.Clear();
-        
-        Console.WriteLine(board);
-        board.AddToSlot(1, 1);
-        board.AddToSlot(1, 2);
-        Console.WriteLine(board);
-        Console.WriteLine(board.CheckVictory(4,1));
-        board.AddToSlot(1, 3);
-        Console.WriteLine(board);
-        Console.WriteLine(board.CheckVictory(4,1));
-        board.AddToSlot(1, 4);
-        Console.WriteLine(board);
-        Console.WriteLine(board.CheckVictory(4,1));
+        // test();
+        Game game = new Game();
+        game.start();
 
-        // Console.ForegroundColor = ConsoleColor.DarkRed;
-      
+
+        void test() {
+            Board board = new();
+            board.Clear();
+
+            Console.WriteLine(board);
+            board.AddToSlot(1, 1);
+            board.AddToSlot(1, 2);
+            Console.WriteLine(board);
+            Console.WriteLine(board.CheckVictory(4, 1));
+            board.AddToSlot(1, 3);
+            Console.WriteLine(board);
+            Console.WriteLine(board.CheckVictory(4, 1));
+            board.AddToSlot(1, 4);
+            Console.WriteLine(board);
+            Console.WriteLine(board.CheckVictory(4, 1));
+
+        }
+
+        // Console.ForegroundColor = ConsoleColor.DarkRed 
     }
 }
