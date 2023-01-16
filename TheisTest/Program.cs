@@ -1,4 +1,4 @@
-﻿using TheisTest;
+﻿using ForInARow;
 
 internal class Program
 {
@@ -12,7 +12,6 @@ internal class Program
         void test() {
             Board board = new();
             board.Clear();
-
             Console.WriteLine(board);
             board.AddToSlot(1, 1);
             board.AddToSlot(1, 2);

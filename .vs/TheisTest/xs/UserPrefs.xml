@@ -1,4 +1,28 @@
 ﻿<Properties StartupConfiguration="{18C72336-D5D1-4AD7-9D12-BC7E2E4BB27F}|Default">
-  <MonoDevelop.Ide.ItemProperties.TheisTest FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ForInARow PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheisTest/Program.cs">
+    <Files>
+      <File FileName="TheisTest/Program.cs" Line="9" Column="9" />
+      <File FileName="TheisTest/Board.cs" />
+      <File FileName="TheisTest/Game.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TheisTest" expanded="True">
+            <Node name="TheisTest" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+              </Node>
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

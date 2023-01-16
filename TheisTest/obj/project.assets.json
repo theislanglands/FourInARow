@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/TheisTest.csproj",
-      "projectName": "TheisTest",
-      "projectPath": "/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/TheisTest.csproj",
+      "projectUniqueName": "/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/ForInARow.csproj",
+      "projectName": "ForInARow",
+      "projectPath": "/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/ForInARow.csproj",
       "packagesPath": "/Users/theislanglands/.nuget/packages/",
       "outputPath": "/Users/theislanglands/Dropbox/Mac/Documents/Programmering/c#-excersize/TheisTest/TheisTest/obj/",
       "projectStyle": "PackageReference",

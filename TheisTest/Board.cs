@@ -1,15 +1,15 @@
 ﻿using System.Drawing;
 using System.Numerics;
 
-namespace TheisTest
+namespace ForInARow
 
 {
     public class Board
     {
         int width = 7;
         int height = 6;
-        int[,] grid;
 
+        int[,] grid;
 
         public Board()
         {
@@ -17,6 +17,15 @@ namespace TheisTest
             grid = new int[height, width];
             FillWithNumber(0);
         }
+
+        public int getHeight() {
+            return height;
+        }
+
+        public int getWidth() {
+            return width;
+        }
+
 
         public void FillWithNumber(int value)
         {
@@ -29,12 +38,16 @@ namespace TheisTest
             }
         }
 
+        public int getValueAtPoint(int row, int slot) {
+
+            return grid[row, slot];
+        }
         public void Clear()
         {
             Array.Clear(grid, 0, grid.Length);
         }
 
-        public bool hasAvailableSlots()
+        public bool HasAvailableSlots()
         {
             for (int i = 0; i < width; i++)
             {
@@ -109,6 +122,10 @@ namespace TheisTest
 
         public void AddToSlot(int playerNumber, int col) {
 
+            if (col >= width || col<0) throw new ArgumentException("column input exceedes board size", nameof(col));
+            if (playerNumber < 1 || playerNumber > 2) throw new ArgumentException("player number should be 1 or 2", nameof(playerNumber));
+
+
             // initial value = empty column
             int index = height - 1;
 
@@ -180,6 +197,11 @@ namespace TheisTest
             }
 
             return colNumberString;
+        }
+
+        internal object getGrid()
+        {
+            throw new NotImplementedException();
         }
     }
 }

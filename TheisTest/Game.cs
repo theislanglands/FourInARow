@@ -1,5 +1,5 @@
 ﻿using System;
-namespace TheisTest
+namespace ForInARow
 {
 	public class Game
 	{
@@ -38,7 +38,7 @@ namespace TheisTest
                     finished = true;
                 }
 
-                if (!board.hasAvailableSlots())
+                if (!board.HasAvailableSlots())
                 {
                     Console.WriteLine("DRAW - no more available slots");
                     finished = true;
