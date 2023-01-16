@@ -120,7 +120,7 @@ namespace ForInARow
             };
         }
 
-        public void AddToSlot(int playerNumber, int col) {
+        public bool AddToSlot(int playerNumber, int col) {
 
             if (col >= width || col<0) throw new ArgumentException("column input exceedes board size", nameof(col));
             if (playerNumber < 1 || playerNumber > 2) throw new ArgumentException("player number should be 1 or 2", nameof(playerNumber));
@@ -128,6 +128,7 @@ namespace ForInARow
 
             // initial value = empty column
             int index = height - 1;
+            bool success;
 
             // finding correct index
             for (int row = 0; row < height; row++)
@@ -140,9 +141,14 @@ namespace ForInARow
             }
 
             // if found index less than zero, col is full
-            if (index < 0) return;
-            
-            grid[index, col] = playerNumber;
+            if (index < 0) success = false;
+            else
+            {
+                grid[index, col] = playerNumber;
+                success = true;
+            }
+
+            return success;
         }
 
         public override string ToString()
